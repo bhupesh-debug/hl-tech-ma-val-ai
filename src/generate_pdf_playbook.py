@@ -216,26 +216,26 @@ def build_pdf(output_path: str):
         ["Methodology", "Inputs (X) &amp; Drivers", "Model Architecture", "Transaction Output &amp; Role in Deal"],
         [
             "<b>1. Public Trading Comps (EV / ARR &amp; EBITDA)</b>",
-            "50 software peers; ARR growth, NRR, Gross Margin, Rule of 40 (Growth + FCF%).",
-            "<b>Peer Multiple Regression &amp; Quartiles</b>. EV/ARR &amp; EV/EBITDA benchmarking.",
-            "Establishes baseline public market trading range for Pitchbooks and Fairness Opinions.",
+            "50 peers; ARR growth, NRR, Gross Margin, Rule of 40.",
+            "<b>Peer Regression &amp; Quartiles</b>.<br/>EV/ARR &amp; EV/EBITDA benchmarking.",
+            "Establishes public market baseline for Pitchbooks &amp; Fairness Opinions.",
         ],
         [
             "<b>2. Precedent Tech M&amp;A Transactions</b>",
-            "Recent strategic &amp; sponsor acquisitions in Software/SaaS with control premiums.",
-            "<b>M&amp;A Multiple Distribution</b> (typically 15–20% premium over public comps).",
-            "Used to guide sell-side valuation expectations and auction reserve prices.",
+            "Recent strategic &amp; sponsor software deals with control premiums.",
+            "<b>M&amp;A Multiple Distribution</b><br/>(15–20% premium over comps).",
+            "Guides sell-side valuation expectations and auction reserve prices.",
         ],
         [
             "<b>3. Unlevered Discounted Cash Flow (DCF)</b>",
-            "5-year UFCF projections, WACC (9.5%–11.5%), Terminal Growth (2.5%–3.5%).",
-            "<b>Mid-Year Discounted Cash Flow Engine</b> + Gordon Growth Terminal Value.",
-            "Provides intrinsic standalone valuation independent of market multiple cycles.",
+            "5-year UFCF, WACC (9.5–11.5%), Terminal Growth (2.5–3.5%).",
+            "<b>Mid-Year UFCF DCF Engine</b> + Gordon Growth Terminal Value.",
+            "Provides intrinsic standalone valuation independent of cycles.",
         ],
         [
             "<b>4. Financial Sponsor LBO Model</b>",
-            "Target debt capacity (Senior + Mezz), 85% cash sweep, exit multiples.",
-            "<b>5-Year Debt Paydown &amp; Returns Engine</b> computing Sponsor Net IRR and MoIC.",
+            "Target debt capacity, 85% cash sweep, exit multiples.",
+            "<b>5-Year Debt Paydown Engine</b><br/>computing Sponsor Net IRR &amp; MoIC.",
             "Evaluates private equity sponsor bidding power and floor valuation.",
         ],
     ]
@@ -243,7 +243,7 @@ def build_pdf(output_path: str):
 
     story.append(PageBreak())
 
-    # STEP 3 & 4
+    # STEPS 3, 4 & 5
     story.append(Paragraph("STEPS 3, 4 &amp; 5: VALUATION FOOTBALL FIELD &amp; SPONSOR LBO BENCHMARKS", h1_style))
     story.append(Paragraph("3.1 Project Apex Valuation Football Field ($92M ARR Target)", h2_style))
     ff_data = [
@@ -263,6 +263,10 @@ def build_pdf(output_path: str):
         ["<b>5.0x Leverage ($92.5M Debt)</b>", "16.9% Net IRR (2.18x MoIC)", "20.3% Net IRR (2.52x MoIC)", "23.4% Net IRR (2.86x MoIC)"],
     ]
     story.append(make_table(lbo_sens_data, [1.85 * inch, 1.85 * inch, 1.85 * inch, 1.85 * inch]))
+
+    story.append(PageBreak())
+
+    # STEP 6
 
     story.append(Paragraph("4.2 Key Banker Takeaways for Managing Director &amp; Client Pitches", h2_style))
     story.append(
