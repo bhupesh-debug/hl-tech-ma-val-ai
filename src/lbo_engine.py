@@ -77,3 +77,4 @@ def generate_lbo_sensitivity_table(target: dict) -> pd.DataFrame:
         matrix_rows.append(row)
 
     return pd.DataFrame(matrix_rows)
+

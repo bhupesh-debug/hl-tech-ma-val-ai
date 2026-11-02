@@ -70,3 +70,4 @@ if __name__ == "__main__":
     comps_df.to_csv(comps_path, index=False)
     print(f"[OK] Saved 50 comps to {comps_path}")
     print(comps_df.head(5).to_string(index=False))
+
